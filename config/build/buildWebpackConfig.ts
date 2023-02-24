@@ -1,7 +1,7 @@
 import webpack from "webpack";
 
-import { buildLoaders } from "./bluidLoaders";
-import { buildPlugins } from "./bluidPlugins";
+import { buildLoaders } from "./buildLoaders";
+import { buildPlugins } from "./buildPlugins";
 import { buildDevServer } from "./buildDevServer";
 import { buildResolves } from "./buildResolves";
 
