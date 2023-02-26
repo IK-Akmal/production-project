@@ -1,7 +1,6 @@
 import AppRouter from "./providers/router";
-import { Navbar } from "widgets/Navbar";
+import { useTheme } from "./providers/ThemeProvider";
 
-import { useTheme } from "app/providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames";
 
 import "./styles/index.scss";
@@ -11,7 +10,6 @@ const App = () => {
 
   return (
     <div className={classNames("app", theme)}>
-      <Navbar />
       <AppRouter />
     </div>
   );

@@ -1,0 +1,22 @@
+.layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: var(--navbar-height) 1fr;
+
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar content";
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+  padding: 20px;
+}
