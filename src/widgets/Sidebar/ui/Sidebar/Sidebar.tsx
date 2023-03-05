@@ -6,6 +6,7 @@ import { classNames } from "shared/lib/classNames";
 
 import styles from "./Sidebar.module.scss";
 import SidebarProps from "./Sidebar.props";
+import LangSwitcher from "shared/ui/LangSwitcher";
 const Sidebar = ({ className, ...props }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState<boolean>(false);
 
@@ -22,6 +23,7 @@ const Sidebar = ({ className, ...props }: SidebarProps) => {
 
       <div className={styles.footer}>
         <ThemeSwitcher />
+        <LangSwitcher />
       </div>
     </aside>
   );
