@@ -1,25 +1,20 @@
 .sidebar {
-  width: var(--sidebar-width);
-  height: calc(100vh - var(--navbar-height));
-
-  background: var(--inverted-bg-color);
-
-  position: relative;
-
-  transition: width 0.3s linear;
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--navbar-height));
+    background: var(--inverted-bg-color);
+    position: relative;
+    transition: width 0.3s linear;
 }
 
 .collapsed {
-  width: var(--sidebar-width-collapsed);
+    width: var(--sidebar-width-collapsed);
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-
-  width: 100%;
-
-  position: absolute;
-  bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
 }

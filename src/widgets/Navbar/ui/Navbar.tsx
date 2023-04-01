@@ -6,7 +6,7 @@ import NavbarProps from './Navbar.props';
 import styles from './Navbar.module.scss';
 
 const Navbar: FC<NavbarProps> = ({ className }) => (
-    <nav className={classNames(styles.Navbar, className)}>
+    <nav className={classNames(styles.navbar, className)}>
         <div className={styles.links}>
             <AppLink to="/">Главная</AppLink>
             <AppLink to="/about">О сайте</AppLink>
