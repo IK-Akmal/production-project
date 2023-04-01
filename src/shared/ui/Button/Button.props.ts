@@ -1,7 +1,7 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 export enum ThemeButton {
-  Clear = "clear",
+  Clear = 'clear',
 }
 
 interface ButtonProps
