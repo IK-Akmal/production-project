@@ -1,4 +1,7 @@
 {
   "mainPage": "Main Page",
-  "lang": "English"
+  "lang": "English",
+  "main": "Main",
+  "about": "About",
+  "loading": "Loading"
 }
