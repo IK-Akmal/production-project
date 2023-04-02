@@ -1,4 +1,9 @@
-type classNamesProps = (string | Record<string, boolean | string>)[]
+type classNamesProps = Array<
+    null |
+    undefined |
+    string |
+    Record<string, boolean | string>
+>
 
 export function classNames(...args: classNamesProps): string {
     return args.filter((item) => item).flatMap((arg) => {
