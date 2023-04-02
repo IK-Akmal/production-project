@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -30,7 +31,10 @@ module.exports = {
         'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/jsx-filename-extension': [2, { extensions: ['tsx', '.jsx'] }],
-        'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
+        'react/function-component-definition': [
+            2,
+            { namedComponents: 'arrow-function' },
+        ],
 
         'import/extensions': 'off',
         'import/no-unresolved': 'off',
@@ -54,6 +58,7 @@ module.exports = {
 
         'linebreak-style': ['warn', 'windows'],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['error', { ignoreComments: true }],
 
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'warn',
