@@ -2,19 +2,31 @@ import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 import Layout from 'widgets/Layout/ui/Layout';
+import { PageLoader } from 'widgets/PageLoader';
 
 const AppRouter = () => (
-    // eslint-disable-next-line i18next/no-literal-string
-    <Suspense fallback={<div>...loader</div>}>
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                {Object.values(routeConfig).map((route) => (
-                    // eslint-disable-next-line react/jsx-props-no-spreading
-                    <Route key={route.path} {...route} />
-                ))}
-            </Route>
-        </Routes>
-    </Suspense>
+    <Routes>
+        <Route
+            path="/"
+            element={(
+                <Suspense fallback={<PageLoader />}>
+                    <Layout />
+                </Suspense>
+            )}
+        >
+            {Object.values(routeConfig).map(({ path, element }) => (
+                <Route
+                    key={path}
+                    path={path}
+                    element={(
+                        <Suspense fallback={<PageLoader />}>
+                            {element}
+                        </Suspense>
+                    )}
+                />
+            ))}
+        </Route>
+    </Routes>
 );
 
 export default AppRouter;
