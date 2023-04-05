@@ -3,5 +3,6 @@
   "lang": "English",
   "main": "Main",
   "about": "About",
-  "loading": "Loading"
+  "loading": "Loading",
+  "NotFoundPage": "Page not found"
 }
