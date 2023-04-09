@@ -12,6 +12,7 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...props }) => {
 
     return (
         <Button
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...props}
             onClick={toggleTheme}
             theme={ThemeButton.Clear}

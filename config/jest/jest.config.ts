@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
     clearMocks: true,
     testEnvironment: 'jsdom',
@@ -23,10 +25,16 @@ export default {
         'json',
         'node',
     ],
+    moduleNameMapper: {
+        '\\.(s?css)$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyCpmponent.tsx'),
+    },
 
     rootDir: '../../',
 
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
+
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
 };

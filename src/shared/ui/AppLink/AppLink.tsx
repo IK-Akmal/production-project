@@ -10,6 +10,7 @@ const AppLink = ({
 }: AppLinkProps) => (
     <Link
         className={classNames(className)}
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...props}
     />
 );
