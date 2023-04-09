@@ -58,7 +58,7 @@ module.exports = {
 
         'linebreak-style': ['warn', 'windows'],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'max-len': ['error', { ignoreComments: true }],
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
 
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'warn',
@@ -69,4 +69,19 @@ module.exports = {
     globals: {
         isDev: true,
     },
+
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+        {
+            files: ['src/**/*.test.{ts,tsx}', 'config/**/*{ts,tsx}'],
+            rules: {
+                'import/no-extraneous-dependencies': 'off',
+            },
+        },
+    ],
 };

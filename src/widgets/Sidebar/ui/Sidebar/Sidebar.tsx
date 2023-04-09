@@ -16,12 +16,14 @@ const Sidebar = ({ className, ...props }: SidebarProps) => {
 
     return (
         <aside
+            data-testid="sidebar"
             className={classNames(styles.sidebar, className, {
                 [styles.collapsed]: collapsed,
             })}
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...props}
         >
-            <Button onClick={onToggle}>{t('toggle')}</Button>
+            <Button data-testid="sidebar-toggle" onClick={onToggle}>{t('toggle')}</Button>
 
             <div className={styles.footer}>
                 <ThemeSwitcher />
