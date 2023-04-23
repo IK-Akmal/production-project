@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -30,31 +31,29 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': 'warn',
-        'react/jsx-filename-extension': [2, { extensions: ['tsx', '.jsx'] }],
-        'react/function-component-definition': [
-            2,
-            { namedComponents: 'arrow-function' },
-        ],
+        'react/jsx-filename-extension': [2, {
+            extensions: ['tsx', '.jsx'],
+        }],
+        'react/function-component-definition': [2, {
+            namedComponents: 'arrow-function',
+        }],
 
         'import/extensions': 'off',
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
-        'import/order': [
-            'error',
-            {
-                groups: [
-                    'builtin',
-                    'external',
-                    'internal',
-                    'parent',
-                    'sibling',
-                    'index',
-                    'object',
-                    'type',
-                ],
-                'newlines-between': 'always',
-            },
-        ],
+        'import/order': ['error', {
+            groups: [
+                'builtin',
+                'external',
+                'internal',
+                'parent',
+                'sibling',
+                'index',
+                'object',
+                'type',
+            ],
+            'newlines-between': 'always',
+        }],
 
         'linebreak-style': ['warn', 'windows'],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
@@ -78,7 +77,7 @@ module.exports = {
             },
         },
         {
-            files: ['src/**/*.test.{ts,tsx}', 'config/**/*{ts,tsx}'],
+            files: ['src/**/*.test.{ts,tsx}', 'config/**/*.{ts,tsx}'],
             rules: {
                 'import/no-extraneous-dependencies': 'off',
             },
