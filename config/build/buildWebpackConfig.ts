@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import webpack from 'webpack';
 
 import { buildLoaders } from './buildLoaders';
