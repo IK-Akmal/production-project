@@ -18,7 +18,7 @@ jobs:
               with: 
                  node-version: ${{matrix.node_version}}
             - name: install modules
-              run: npm ci
+              run: yarn install
             - name: linting typescript
               run: npm run lint:ts
             - name: linting scss
@@ -37,7 +37,7 @@ jobs:
               with: 
                  node-version: ${{matrix.node_version}}
             - name: install modules
-              run: npm ci
+              run: yarn install
             - name: testing
               run: npm run test:unit
     build: 
@@ -54,6 +54,6 @@ jobs:
               with: 
                  node-version: ${{matrix.node_version}}
             - name: install modules
-              run: npm ci
+              run: yarn install
             - name: build
               run: npm run build:prod
