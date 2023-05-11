@@ -3,7 +3,7 @@ import path from 'path';
 import webpack from 'webpack';
 
 import svgBuildLoader from '../build/loaders/svgBuildLoader';
-import cssBuildLoader from '../build/loaders/CssBuildLoader';
+import cssBuildLoader from '../build/loaders/cssBuildLoader';
 
 type Props = {
     config:webpack.Configuration
