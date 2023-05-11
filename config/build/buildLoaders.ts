@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 
 import { BuildOptions } from './types/config';
-import cssBuildLoader from './loaders/CssBuildLoader';
+import cssBuildLoader from './loaders/cssBuildLoader';
 import svgBuildLoader from './loaders/svgBuildLoader';
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
