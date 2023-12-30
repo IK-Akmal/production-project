@@ -9,23 +9,25 @@ type Props = {
     config:webpack.Configuration
 }
 
-const isRegExp = (arg:any):arg is RegExp => {
+const isRuleSet = (
+    arg:webpack.ModuleOptions['rules'][number],
+): arg is webpack.RuleSetRule => {
     if (!arg) return false;
 
-    return arg instanceof RegExp;
+    return typeof arg === 'object' && 'test' in arg;
 };
+
+const isRegExp = (arg:webpack.RuleSetRule['test']):arg is RegExp => arg instanceof RegExp;
 
 export default ({ config }:Props) => {
     const src = path.resolve(__dirname, '..', '..', 'src');
     const isDev = true;
 
-    const fileLoaderRule = config.module.rules.find((rule) => {
-        const isNotString = typeof rule !== 'string';
+    const fileLoaderRule = config.module.rules.find(
+        (rule) => isRuleSet(rule) && isRegExp(rule.test) && rule.test.test('.svg'),
+    );
 
-        return isNotString && isRegExp(rule.test) && rule.test.test('.svg');
-    });
-
-    if (typeof fileLoaderRule !== 'string') { fileLoaderRule.exclude = /\.svg$/; }
+    if (isRuleSet(fileLoaderRule)) { fileLoaderRule.exclude = /\.svg$/; }
 
     config.resolve.modules.push(src);
     config.resolve.modules.push('node_modules');
