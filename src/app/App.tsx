@@ -1,4 +1,5 @@
 import { classNames } from 'shared/lib/classNames';
+import Modal from 'shared/ui/Modal/Modal';
 
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider';
@@ -10,6 +11,7 @@ const App = () => {
 
     return (
         <div className={classNames('app', theme)}>
+            <Modal />
             <AppRouter />
         </div>
     );

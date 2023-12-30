@@ -82,5 +82,11 @@ module.exports = {
                 'import/no-extraneous-dependencies': 'off',
             },
         },
+        {
+            files: ['*.ts', '*.tsx'],
+            rules: {
+                'no-undef': 'off',
+            },
+        },
     ],
 };
