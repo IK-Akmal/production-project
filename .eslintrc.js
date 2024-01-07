@@ -18,11 +18,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: [
-        'react',
-        '@typescript-eslint',
-        'i18next',
-    ],
+    plugins: ['react', '@typescript-eslint', 'i18next'],
     rules: {
         indent: [2, 4],
 
@@ -31,29 +27,38 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': 'warn',
-        'react/jsx-filename-extension': [2, {
-            extensions: ['tsx', '.jsx'],
-        }],
-        'react/function-component-definition': [2, {
-            namedComponents: 'arrow-function',
-        }],
+        'react/jsx-filename-extension': [
+            2,
+            {
+                extensions: ['tsx', '.jsx'],
+            },
+        ],
+        'react/function-component-definition': [
+            2,
+            {
+                namedComponents: 'arrow-function',
+            },
+        ],
 
         'import/extensions': 'off',
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
-        'import/order': ['error', {
-            groups: [
-                'builtin',
-                'external',
-                'internal',
-                'parent',
-                'sibling',
-                'index',
-                'object',
-                'type',
-            ],
-            'newlines-between': 'always',
-        }],
+        'import/order': [
+            'error',
+            {
+                groups: [
+                    'builtin',
+                    'external',
+                    'internal',
+                    'parent',
+                    'sibling',
+                    'index',
+                    'object',
+                    'type',
+                ],
+                'newlines-between': 'always-and-inside-groups',
+            },
+        ],
 
         'linebreak-style': ['warn', 'windows'],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
