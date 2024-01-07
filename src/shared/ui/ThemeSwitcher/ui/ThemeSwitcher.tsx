@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames';
-import { Button, ThemeButton } from 'shared/ui/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 
@@ -15,7 +15,7 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className, ...props }) => {
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...props}
             onClick={toggleTheme}
-            theme={ThemeButton.Clear}
+            theme={ButtonTheme.Clear}
             className={classNames(className)}
         >
             {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}

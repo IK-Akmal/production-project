@@ -1,3 +1,8 @@
+@mixin square-size($size) {
+    width: $size;
+    height: $size;
+}
+
 .button {
     cursor: pointer;
     color: var(--primary-color);
@@ -16,4 +21,44 @@
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     background: none;
+}
+
+.background {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    border: none;
+}
+
+.backgroundInvertend {
+    background: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+    border: none;
+}
+
+.square {
+    padding: 0;
+}
+
+.square.small {
+    @include square-size(var(--font-line-m));
+}
+
+.square.medium {
+    @include square-size(var(--font-line-l));
+}
+
+.square.large {
+    @include square-size(var(--font-line-xl));
+}
+
+.small {
+    font: var(--font-m);
+}
+
+.medium {
+    font: var(--font-l);
+}
+
+.large {
+    font: var(--font-xl);
 }
