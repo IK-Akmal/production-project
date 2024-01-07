@@ -6,10 +6,6 @@
     transition: width 0.3s linear;
 }
 
-.collapsed {
-    width: var(--sidebar-width-collapsed);
-}
-
 .footer {
     display: flex;
     justify-content: center;
@@ -17,4 +13,27 @@
     width: 100%;
     position: absolute;
     bottom: 20px;
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .footer {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.collapsedNavbar {
+    align-items: center;
+
+    span {
+        display: none;
+    }
+}
+
+.collapsedBtn {
+    position: absolute;
+    right: -32px;
+    bottom: 32px;
 }

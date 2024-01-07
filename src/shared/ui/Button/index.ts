@@ -1,2 +1,2 @@
-export { ThemeButton } from './Button.props';
+export { ButtonTheme, ButtonSize } from './Button.enums';
 export { default as Button } from './Button';

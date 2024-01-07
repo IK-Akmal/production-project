@@ -1,15 +1,13 @@
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames';
 
-import { AppLinkProps } from './AppLink.props';
+import styles from './AppLink.module.scss';
 
-const AppLink = ({
-    className,
-    // theme = AppLinkTheme.Primary,
-    ...props
-}: AppLinkProps) => (
+import { AppLinkTheme, type AppLinkProps } from './AppLink.props';
+
+const AppLink = ({ className, theme = AppLinkTheme.Primary, ...props }: AppLinkProps) => (
     <Link
-        className={classNames(className)}
+        className={classNames(styles.link, styles[theme], className)}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...props}
     />

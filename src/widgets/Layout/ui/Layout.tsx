@@ -1,12 +1,13 @@
 import { Outlet } from 'react-router-dom';
-import { Navbar } from 'widgets/Navbar';
+
 import { Sidebar } from 'widgets/Sidebar';
+import { Header } from 'widgets/Header';
 
 import styles from './Layout.module.scss';
 
 const Layout = () => (
     <section className={styles.layout}>
-        <Navbar className={styles.navbar} />
+        <Header className={styles.header} />
         <Sidebar className={styles.sidebar} />
         <main className={styles.content}>
             <Outlet />
