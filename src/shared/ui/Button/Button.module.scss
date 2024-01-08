@@ -8,12 +8,17 @@
     color: var(--primary-color);
 }
 
-.clear {
+.clear,
+.clearInvertend {
     padding: 0;
     margin: 0;
     border: none;
     background: none;
     outline: none;
+}
+
+.clearInvertend {
+    color: var(--inverted-primary-color);
 }
 
 .outline {
