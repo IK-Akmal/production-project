@@ -1,5 +1,6 @@
 import Button from './Button';
-import { ThemeButton } from './Button.props';
+
+import { ButtonTheme } from './Button.enums';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -21,12 +22,12 @@ export const Primary: Story = {
 export const Clear: Story = {
     args: {
         children: 'Button',
-        theme: ThemeButton.Clear,
+        theme: ButtonTheme.Clear,
     },
 };
 export const Outline: Story = {
     args: {
         children: 'Button',
-        theme: ThemeButton.Outline,
+        theme: ButtonTheme.Outline,
     },
 };

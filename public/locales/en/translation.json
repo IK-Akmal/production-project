@@ -1,10 +1,11 @@
 {
-  "mainPage": "Main Page",
-  "lang": "English",
-  "main": "Main",
-  "about": "About",
-  "loading": "Loading",
-  "NotFoundPage": "Page not found",
-  "errorMessage": "Something went wrong.",
-  "updatePage": "Refresh the page"
+    "mainPage": "Main Page",
+    "shortLang": "Eng",
+    "lang": "English",
+    "main": "Main",
+    "about": "About",
+    "loading": "Loading",
+    "NotFoundPage": "Page not found",
+    "errorMessage": "Something went wrong.",
+    "updatePage": "Refresh the page"
 }

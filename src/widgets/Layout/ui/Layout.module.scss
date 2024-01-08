@@ -1,11 +1,11 @@
 .layout {
     display: grid;
-    grid-template:  
-        "navbar navbar" var(--navbar-height)
-        "sidebar content" 1fr / auto 1fr;
+    grid-template:
+        'navbar navbar' var(--navbar-height)
+        'sidebar content' 1fr / auto 1fr;
 }
 
-.navbar {
+.header {
     grid-area: navbar;
 }
 

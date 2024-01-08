@@ -1,7 +1,13 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames';
+
 import AppLink from 'shared/ui/AppLink/AppLink';
+import { classNames } from 'shared/lib/classNames';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { AppLinkTheme } from 'shared/ui/AppLink/AppLink.props';
+
+import MainIcon from 'shared/assets/icons/main.svg';
+import AboutIcon from 'shared/assets/icons/about.svg';
 
 import NavbarProps from './Navbar.props';
 import styles from './Navbar.module.scss';
@@ -11,10 +17,14 @@ const Navbar: FC<NavbarProps> = ({ className }) => {
 
     return (
         <nav className={classNames(styles.navbar, className)}>
-            <div className={styles.links}>
-                <AppLink to="/">{t('main')}</AppLink>
-                <AppLink to="/about">{t('about')}</AppLink>
-            </div>
+            <AppLink theme={AppLinkTheme.Secondary} to={RoutePath.main} className={styles.link}>
+                <MainIcon className={styles.icon} />
+                <span className={styles.text}>{t('main')}</span>
+            </AppLink>
+            <AppLink theme={AppLinkTheme.Secondary} to={RoutePath.about} className={styles.link}>
+                <AboutIcon className={styles.icon} />
+                <span className={styles.text}>{t('about')}</span>
+            </AppLink>
         </nav>
     );
 };

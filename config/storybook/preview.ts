@@ -20,7 +20,7 @@ const preview: Preview = {
 
 export const globalTypes = {
     scheme: {
-        name: 'Scheme',
+        name: 'Theme',
         description: 'Select light or dark theme',
         defaultValue: 'light',
         toolbar: {

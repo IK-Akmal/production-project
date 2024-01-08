@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routeConfig } from 'shared/config/routeConfig/routeConfig';
-import Layout from 'widgets/Layout/ui/Layout';
+import { Layout } from 'widgets/Layout';
 import { PageLoader } from 'widgets/PageLoader';
 
 const AppRouter = () => (
@@ -18,11 +18,7 @@ const AppRouter = () => (
                 <Route
                     key={path}
                     path={path}
-                    element={(
-                        <Suspense fallback={<PageLoader />}>
-                            {element}
-                        </Suspense>
-                    )}
+                    element={<Suspense fallback={<PageLoader />}>{element}</Suspense>}
                 />
             ))}
         </Route>

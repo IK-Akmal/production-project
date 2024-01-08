@@ -1,16 +1,15 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
-export enum ThemeButton {
-  Clear = 'clear',
-  Outline = 'outline',
-}
+import { ButtonSize, ButtonTheme } from './Button.enums';
 
 interface ButtonProps
   extends DetailedHTMLProps<
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > {
-  theme?: ThemeButton;
+  theme?: ButtonTheme;
+  square?: boolean;
+  size?: ButtonSize;
 }
 
 export default ButtonProps;
