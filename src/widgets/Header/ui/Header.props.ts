@@ -1,5 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {}
+interface HeaderProps
+    extends Omit<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, 'children'> {}
 
 export default HeaderProps;

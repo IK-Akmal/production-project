@@ -18,7 +18,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
     rules: {
         indent: [2, 4],
 
@@ -69,6 +69,9 @@ module.exports = {
 
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'error',
+
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
     },
     globals: {
         isDev: true,
@@ -85,6 +88,12 @@ module.exports = {
             files: ['src/**/*.test.{ts,tsx}', 'config/**/*.{ts,tsx}'],
             rules: {
                 'import/no-extraneous-dependencies': 'off',
+            },
+        },
+        {
+            files: ['*.ts', '*.tsx'],
+            rules: {
+                'no-undef': 'off',
             },
         },
     ],

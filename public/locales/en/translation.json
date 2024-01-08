@@ -7,5 +7,6 @@
     "loading": "Loading",
     "NotFoundPage": "Page not found",
     "errorMessage": "Something went wrong.",
-    "updatePage": "Refresh the page"
+    "updatePage": "Refresh the page",
+    "signin": "Sign in"
 }

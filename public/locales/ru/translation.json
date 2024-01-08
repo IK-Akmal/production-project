@@ -7,5 +7,6 @@
     "loading": "Загрузка",
     "NotFoundPage": "Страница не найдено",
     "errorMessage": "Что-то пошло не так.",
-    "updatePage": "Обновить страницу"
+    "updatePage": "Обновить страницу",
+    "signin": "Войти"
 }
