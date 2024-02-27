@@ -96,5 +96,12 @@ module.exports = {
                 'no-undef': 'off',
             },
         },
+
+        {
+            files: ['**/src/**/*.slice.{ts,tsx}'],
+            rules: {
+                'no-param-reassign': 'off',
+            },
+        },
     ],
 };
