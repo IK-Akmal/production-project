@@ -1,7 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { Button } from 'shared/ui/Button';
 
 import styles from './PageError.module.scss';
+
+import { Button } from '@/shared/ui/Button';
 
 const PageError = () => {
     const { t } = useTranslation();

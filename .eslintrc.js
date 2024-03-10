@@ -74,7 +74,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
     },
     globals: {
-        isDev: true,
+        __IS_DEV__: true,
     },
 
     overrides: [

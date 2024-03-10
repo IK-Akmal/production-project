@@ -3,6 +3,7 @@ import { Preview } from '@storybook/react';
 import { ThemeDecorator } from './Decorators/ThemeDecorator';
 import { StyleDecorator } from './Decorators/StyleDecorator';
 import { RouterDecorator } from './Decorators/RouterDecorator';
+import { StoreDecorator } from './Decorators/StoreDecorator';
 
 const preview: Preview = {
     parameters: {
@@ -15,7 +16,7 @@ const preview: Preview = {
         },
 
     },
-    decorators: [RouterDecorator, StyleDecorator, ThemeDecorator],
+    decorators: [RouterDecorator, StyleDecorator, ThemeDecorator, StoreDecorator],
 };
 
 export const globalTypes = {

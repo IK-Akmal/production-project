@@ -1,14 +1,15 @@
 import { useState } from 'react';
 
-import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button';
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
-import { classNames } from 'shared/lib/classNames';
-import { LangSwitcher } from 'shared/ui/LangSwitcher';
-
-import { Navbar } from 'widgets/Navbar';
-
 import styles from './Sidebar.module.scss';
+
 import SidebarProps from './Sidebar.props';
+
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
+import { ThemeSwitcher } from '@/shared/ui/ThemeSwitcher';
+import { classNames } from '@/shared/lib/classNames';
+import { LangSwitcher } from '@/shared/ui/LangSwitcher';
+
+import { Navbar } from '@/widgets/Navbar';
 
 const Sidebar = ({ className, ...props }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState<boolean>(false);

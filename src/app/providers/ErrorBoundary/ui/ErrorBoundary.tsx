@@ -1,11 +1,12 @@
 import React, { ErrorInfo, Suspense } from 'react';
-import PageError from 'widgets/PageError/ui/PageError';
 
 import {
     ErrorBoundaryProps,
     ErrorBoundaryStateType,
 }
     from './ErrorBoundary.props';
+
+import PageError from '@/widgets/PageError/ui/PageError';
 
 class ErrorBoundary
     extends React.Component<ErrorBoundaryProps, ErrorBoundaryStateType> {

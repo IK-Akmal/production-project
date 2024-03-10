@@ -1,9 +1,9 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from 'shared/lib/hooks';
-
-import { Button } from 'shared/ui/Button';
 
 import { couterActions, getCounterValue } from '../model/slice/Couter.slice';
+
+import { Button } from '@/shared/ui/Button';
+import { useAppDispatch, useAppSelector } from '@/shared/lib/hooks';
 
 export const Counter = () => {
     const dispatch = useAppDispatch();

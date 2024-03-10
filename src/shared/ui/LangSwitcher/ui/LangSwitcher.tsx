@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from 'shared/ui/Button';
+
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 
 type LangSwitcherProps = {
     short?: boolean;
