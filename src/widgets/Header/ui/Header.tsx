@@ -1,15 +1,14 @@
 import React, { useCallback, useState } from 'react';
 
-import { classNames } from 'shared/lib/classNames';
-import Modal from 'shared/ui/Modal/Modal';
-
-import { Button, ButtonTheme } from 'shared/ui/Button';
-
 import { useTranslation } from 'react-i18next';
 
 import styles from './Header.module.scss';
 
 import type HeaderProps from './Header.props';
+
+import Modal from '@/shared/ui/Modal/Modal';
+import { classNames } from '@/shared/lib/classNames';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 
 const Header = ({ className, ...props }: HeaderProps) => {
     const [isAuthModalVisible, setIsAuthModalVisible] = useState(false);

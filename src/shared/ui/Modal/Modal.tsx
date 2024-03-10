@@ -1,12 +1,13 @@
 import {
     MouseEvent, useCallback, useEffect, useRef, useState,
 } from 'react';
-import { classNames } from 'shared/lib/classNames';
 
 import { Portal } from '../Portal';
 
 import ModalProps from './Modal.props';
 import styles from './Modal.module.scss';
+
+import { classNames } from '@/shared/lib/classNames';
 
 const ANIMATION_DELAY = 200;
 

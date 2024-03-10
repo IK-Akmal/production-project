@@ -1,8 +1,9 @@
-import { classNames } from 'shared/lib/classNames';
-import { Loader } from 'shared/ui/Loader';
-
 import styles from './PageLoader.module.scss';
+
 import PageLoaderProps from './PageLoader.props';
+
+import { Loader } from '@/shared/ui/Loader';
+import { classNames } from '@/shared/lib/classNames';
 
 const PageLoader = ({ className, ...props }:PageLoaderProps) => (
     // eslint-disable-next-line react/jsx-props-no-spreading

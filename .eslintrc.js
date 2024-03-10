@@ -74,7 +74,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
     },
     globals: {
-        isDev: true,
+        __IS_DEV__: true,
     },
 
     overrides: [
@@ -94,6 +94,13 @@ module.exports = {
             files: ['*.ts', '*.tsx'],
             rules: {
                 'no-undef': 'off',
+            },
+        },
+
+        {
+            files: ['**/src/**/*.slice.{ts,tsx}'],
+            rules: {
+                'no-param-reassign': 'off',
             },
         },
     ],

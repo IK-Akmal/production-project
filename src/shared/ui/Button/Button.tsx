@@ -1,9 +1,9 @@
-import { classNames } from 'shared/lib/classNames';
-
 import styles from './Button.module.scss';
 import ButtonProps from './Button.props';
 
 import { ButtonSize } from './Button.enums';
+
+import { classNames } from '@/shared/lib/classNames';
 
 const Button = ({
     className,

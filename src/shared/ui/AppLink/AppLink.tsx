@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import { classNames } from 'shared/lib/classNames';
 
 import styles from './AppLink.module.scss';
 
 import { AppLinkTheme, type AppLinkProps } from './AppLink.props';
+
+import { classNames } from '@/shared/lib/classNames';
 
 const AppLink = ({ className, theme = AppLinkTheme.Primary, ...props }: AppLinkProps) => (
     <Link

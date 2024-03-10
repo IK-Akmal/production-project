@@ -1,6 +1,6 @@
 import path from 'path';
 
-import webpack from 'webpack';
+import webpack, { DefinePlugin } from 'webpack';
 
 import svgBuildLoader from '../build/loaders/svgBuildLoader';
 import cssBuildLoader from '../build/loaders/cssBuildLoader';
@@ -22,7 +22,7 @@ const isRuleSet = (
 
 const isRegExp = (arg: webpack.RuleSetRule['test']): arg is RegExp => arg instanceof RegExp;
 
-export default ({ config }: Props) => {
+export default ({ config }: Props):webpack.Configuration => {
     const src = path.resolve(__dirname, '..', '..', 'src');
     const isDev = true;
 
@@ -37,6 +37,22 @@ export default ({ config }: Props) => {
     config.resolve?.extensions?.push('ts', 'tsx');
     config.module?.rules?.push(svgBuildLoader());
     config.module?.rules?.push(cssBuildLoader(isDev));
+    config.plugins?.push(
+        new DefinePlugin({
+            __IS_DEV__: true,
+        }),
+    );
+    console.log({ alias: config.resolve?.alias });
 
-    return config;
+    return {
+        ...config,
+        resolve: {
+            ...config.resolve,
+            alias: {
+                ...config.resolve?.alias,
+                '@': src,
+            },
+        },
+
+    };
 };

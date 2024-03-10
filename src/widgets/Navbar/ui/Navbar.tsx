@@ -1,16 +1,17 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import AppLink from 'shared/ui/AppLink/AppLink';
-import { classNames } from 'shared/lib/classNames';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { AppLinkTheme } from 'shared/ui/AppLink/AppLink.props';
-
-import MainIcon from 'shared/assets/icons/main.svg';
-import AboutIcon from 'shared/assets/icons/about.svg';
-
 import NavbarProps from './Navbar.props';
+
 import styles from './Navbar.module.scss';
+
+import AboutIcon from '@/shared/assets/icons/about.svg';
+import MainIcon from '@/shared/assets/icons/main.svg';
+
+import AppLink from '@/shared/ui/AppLink/AppLink';
+import { classNames } from '@/shared/lib/classNames';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { AppLinkTheme } from '@/shared/ui/AppLink/AppLink.props';
 
 const Navbar: FC<NavbarProps> = ({ className }) => {
     const { t } = useTranslation();
